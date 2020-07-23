@@ -1,0 +1,39 @@
+{
+  "persons": [
+    {
+      "name": "Arto Hellas",
+      "number": "040-123456",
+      "id": 1
+    },
+    {
+      "name": "Ada Lovelace",
+      "number": "39-44-5323523",
+      "id": 2
+    },
+    {
+      "name": "Dan Abramov",
+      "number": "12-43-234345",
+      "id": 3
+    },
+    {
+      "name": "Aivo U",
+      "number": "020202",
+      "id": 4
+    },
+    {
+      "name": "Chispa",
+      "number": "0302",
+      "id": 7
+    },
+    {
+      "name": "Julius",
+      "number": "133",
+      "id": 8
+    },
+    {
+      "name": "Matti",
+      "number": "03030303022",
+      "id": 9
+    }
+  ]
+}
