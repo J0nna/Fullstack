@@ -59,20 +59,24 @@ const Flag = ({ country }) => {
   }
 
 const Weather = ({country}) => {
-  const [weather, setWeather] = useState(null) 
+  const [weather, setWeather] = useState({}) 
   const api_key = process.env.REACT_APP_API_KEY
-  const url = `http://api.weatherstack.com/current?access_key=${api_key}&query=${country.capital}`
-  axios
-      .get(url)
+  useEffect(() => {
+    axios
+      .get(`http://api.weatherstack.com/current?access_key=${api_key}&query=${country.capital}`)
       .then(response => {
         console.log(response)
-        setWeather(response.data)
+        setWeather(response.data.current)
       })
+    }, [country.capital, api_key])
   console.log(weather)
       return(
-      <div>{weather.current.temperature}</div>
+      <div><h4>Weather in {country.capital}</h4><br/>
+      <b>Temperature: </b>{weather.temperature} Celcius<br/>
+      <img src={weather.weather_icons} width="20%" height="20%" alt="weather"/>
+      <br/><b>Wind: </b>{weather.wind_speed} direction {weather.wind_dir}</div>
       )
-  } //useEffect??
+  } 
 
 
 const Filter = (props) => {
