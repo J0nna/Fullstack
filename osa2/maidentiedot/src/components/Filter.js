@@ -26,7 +26,6 @@ const Country = ({ country }) => {
   
 
   const Countrydetails = ({ country }) => {
-    if (country.name === 'France') {
       return (
         <div><h2>{country.name}</h2>Capital {country.capital} <br/>Population {country.population}
         <br/><h4>Languages</h4>
@@ -36,15 +35,6 @@ const Country = ({ country }) => {
         </div>
       )
     }
-    else {
-    return (
-    <div><h2>{country.name}</h2>Capital {country.capital} <br/>Population {country.population}
-    <br/><h4>Languages</h4>
-    {country.languages.map((language)=><Language key={language.name} language={language}/>)}
-    <Flag country={country} />
-    </div>
-    )}
-  }
 
 const Language = ({ language }) => {
     return (
